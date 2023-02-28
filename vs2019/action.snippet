@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>action</Title>
+			<Shortcut>action</Shortcut>
+			<Description>controller的action 的代码片段</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>comment</ID>
+					<ToolTip>注释</ToolTip>
+					<Default>comment</Default>
+				</Literal>
+					
+				<Literal>
+					<ID>requestType</ID>
+					<ToolTip>请求方式</ToolTip>
+					<Default>HttpPost</Default>
+				</Literal>
+					
+				<Literal>
+					<ID>responseClass</ID>
+					<ToolTip>返回类型</ToolTip>
+					<Default>responseClass</Default>
+				</Literal>
+					
+				<Literal>
+					<ID>actionName</ID>
+					<ToolTip>名称</ToolTip>
+					<Default>actionName</Default>
+				</Literal>
+					
+				<Literal>
+					<ID>requestClass</ID>
+					<ToolTip>要计算的表达式</ToolTip>
+					<Default>requestClass</Default>
+				</Literal>
+					
+				<Literal>
+					<ID>handler</ID>
+					<ToolTip>处理方式</ToolTip>
+					<Default>handler</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[/// <summary>
+		/// $comment$
+		/// </summary>
+		/// <param name="request"></param>
+		/// <returns></returns>
+		[$requestType$]
+		public ResponseHolder<$responseClass$> $actionName$ (RequestHolder<$requestClass$> request) => $handler$Handler.$actionName$(request);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
