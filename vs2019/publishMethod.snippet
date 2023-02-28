@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>publishMethod</Title>
+			<Shortcut>pm</Shortcut>
+			<Description>消息发送方法</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>methodName</ID>
+					<ToolTip>方法名称</ToolTip>
+					<Default>Add</Default>
+				</Literal>
+				<Literal>
+					<ID>object</ID>
+					<ToolTip>消息类</ToolTip>
+					<Default>Object</Default>
+				</Literal>
+				<Literal>
+					<ID>note</ID>
+					<ToolTip>属性注释</ToolTip>
+					<Default></Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[/// <summary>
+        /// $note$
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="userInfo"></param>
+        public void $methodName$($object$ data, UserInfo userInfo)
+        {
+            Publish(data, userInfo, RouteKey$methodName$);
+        }]]>
+			</Code>
+			<Imports>
+				<Import>
+					<Namespace>using EastSim.NetTrmp.Model </Namespace>
+				</Import>
+			</Imports>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
